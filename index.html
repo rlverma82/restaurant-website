@@ -43,6 +43,9 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid"/>
                 </div>
+                <div class="col-12 col-sm align-self-center order-sm-last">
+                    <a class="btn btn-warning btn-block btn-sm" href="#reservetable" role="button">Reserve a Table</a>
+                </div>
             </div>
         </div>
     </header>
@@ -71,7 +74,7 @@
             <div class="col col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2 class="mt-0">Weekend Grand Buffet</h2>
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                         <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
                     <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet" />
@@ -90,6 +93,54 @@
                         <h2>Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
                         <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content justify-content-center align-items-center" id="reservetable">
+            <div class="col-12 col-sm-8">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body">
+                        <form> <!-- creating a form -->
+                            <div class="form-group row align-items-center"> <!-- for each row the class is form-group -->
+                                <label for="numguest" class="col-12 col-sm-2 col-form-label">Number of Guests</label> <!-- Be sure to add .col-form-label to your <label>s as well so they’re vertically centered with their associated form controls.-->
+                                <div class="form-check-inline form-check col-12 col-sm ml-3">
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" id="numguest1" name="numguest" value="1"> 1 &nbsp;
+                                  </label>
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" id="numguest2" name="numguest" value="2"> 2 &nbsp;
+                                  </label>
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" id="numguest3" name="numguest" value="3"> 3 &nbsp;
+                                  </label>
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" id="numguest4" name="numguest" value="4"> 4 &nbsp;
+                                  </label>
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" id="numguest5" name="numguest" value="5"> 5 &nbsp;
+                                  </label>
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" id="numguest6" name="numguest" value="6"> 6 &nbsp;
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="form-group row align-items-center">
+                                <label for="date" class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                                <div class="col-12 col-sm">
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+                                </div>
+                                <div class="col-12 col-sm">
+                                    <input type="time" class="form-control" id="time" name="time" placeholder="Time" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+								<div class="offset-sm-2 col-md-10">
+									<button type="submit" class="btn btn-primary">Reserve</button>
+								</div>
+							</div>
+                        </form>
                     </div>
                 </div>
             </div>
