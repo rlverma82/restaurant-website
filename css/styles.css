@@ -56,8 +56,13 @@ body{
     min-height: 300px;
     max-width: 300px;
 }
-.carousel-caption
-{
+.carousel-caption{
     top: 50%;
     transform: translateY(-50%);
+}
+#carouselButton{ /* css to shift carousel buttons right */
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
 }
