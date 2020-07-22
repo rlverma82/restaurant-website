@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a style="cursor:pointer" data-toggle="modal" data-target="#loginModal">
+                    <a id="loginModalButton" style="cursor:pointer">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -42,7 +42,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button id="loginClose" type="button" class="close" >
                         &times;
                     </button>
                 </div>
@@ -66,7 +66,7 @@
                            </div>
                        </div>
                        <div class="form-row">
-                           <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                           <button type="button" id="loginModalCancel" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                        </div>
                    </form>
@@ -152,7 +152,7 @@
                     <img src="img/logo.png" class="img-fluid"/>
                 </div>
                 <div class="col-12 col-sm align-self-center order-sm-last">
-                    <a class="btn btn-warning btn-block btn-sm" data-toggle="modal" data-target="#reserveModal" role="button">Reserve a Table</a>
+                    <a class="btn btn-warning btn-block btn-sm" id="reserveButton" role="button">Reserve a Table</a>
                 </div>
             </div>
         </div>
@@ -252,7 +252,7 @@
    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   <script>
+   <script> //jQuery
         $(document).ready(function(){ //jquery method for carousel play/pause button
 
             $('#mycarousel').carousel({interval: 2000});
@@ -268,8 +268,24 @@
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
-
             });
+
+            $('#loginClose').click(function(){ //to hide the loginModal using close button
+                $('#loginModal').modal('hide');
+            });
+
+            $('#loginModalCancel').click(function(){ //to hide the loginModal using cancel button
+                $('#loginModal').modal('hide');
+            });
+
+            $('#reserveButton').click(function(){ //to show the reserveModal using reserve a table button
+                $('#reserveModal').modal('show');
+            });
+
+            $('#loginModalButton').click(function(){ //to show the loginModal using login button
+                $('#loginModal').modal('show');
+            });
+
         });
    </script>
 </body>

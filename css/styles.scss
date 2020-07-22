@@ -65,10 +65,24 @@ body{
         }
     }
 }
-
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+}
 #carouselButton {
     right:0px;
     position: absolute;
     bottom: 0px;
     z-index: 1;
+}
+.modal-header
+{
+	background: $background-dark;
+	color: floralwhite;
+	[type=button]{
+		color: floralwhite;
+	}
+}
+.modal-body{
+	background: $background-pale;
 }
