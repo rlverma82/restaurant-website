@@ -8,8 +8,11 @@ Run **npm start** to host on local server
 
 ## Build (for deployment purpose)
 Run **npm run build**
-      or
+
+or
+
 Run **grunt build** (using Grunt task-runner)
+
 Outcome :: Final files places in 'dist' (all the css files are minified and concatenated, js files uglified and concatenated, whitspaces and comments removed from html files)
 
 ## Info
